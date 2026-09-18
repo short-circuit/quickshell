@@ -1,14 +1,8 @@
 ## Bug Fixes
 
-- Fixed ScreencopyView not displaying when only lock surfaces are shown.
-- Fixed WlSessionLockSurface.visible crashing if accessed before backing surface creation.
-- Fixed mpris players returning `rate` for `minRate` and `maxRate`.
-- Fixed missing/wrong change signals on various properties.
-- Fixed session lock crashes on sleep, wake, DPMS, and unlocking.
-- QsWindow.updatesEnabled makes sure windows are redrawn when set to true.
-- Fixed potential crashes from usage of `WindowsetProjection.screens` during monitor unplug.
-- Fixed crashes from accessing freed objects laundered through a `ScriptModel`.
-- Fixed crashes when a wifi network disappear.
-- Fixed unhandled notifications sending `NotificationClosed` out of order.
-- Fixed `qs kill` not waiting for the process to exit.
-- Fixed IPC calls from children of a crashed and relaunched process crashing.
+- Fixed main process crashes on pam subprocess misbehavior.
+- Fixed crashes when attempting to create or modify session locks reentrantly.
+- Fixed networking state breaking after restarting NetworkManager.
+- Fixed accessibility information not being provided for Quickshell windows.
+- Fixed `WlSessionLockSurface.screen` being null and never updating with a real screen on monitor plug.
+- Fixed `NotificationAction.text` not accepting text updates.
